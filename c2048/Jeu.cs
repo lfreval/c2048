@@ -12,6 +12,8 @@ namespace c2048
 {
     public partial class Jeu : Form
     {
+        private int _mouvements = 0;
+
         public enum Sens
         {
             Haut,
@@ -38,7 +40,13 @@ namespace c2048
 
         private void Jeu_KeyDown(object sender, KeyEventArgs e)
         {
-            MessageEtat($"Touche {Direction(e)}");
+            Sens touche = Direction(e);
+            MessageEtat($"Touche {touche}");
+            if (touche != Sens.Autre)
+            {
+                _mouvements += 1;
+                LabelMouvement.Text = _mouvements.ToString();
+            }
         }
 
         private void MessageEtat(string message)
@@ -56,6 +64,11 @@ namespace c2048
                 case Keys.Right: return Sens.Droite;
                 default: return Sens.Autre;
             }
+        }
+
+        private void Jeu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = MessageBox.Show(String.Format("Fermeture de l'application demandée pour {0}. Voulez-vous quitter ?", e.CloseReason), "Fermeture...", MessageBoxButtons.YesNo) == DialogResult.No;
         }
     }
 }

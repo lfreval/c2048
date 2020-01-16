@@ -373,6 +373,7 @@
             this.MinimumSize = new System.Drawing.Size(350, 430);
             this.Name = "Jeu";
             this.Text = "2048";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jeu_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Jeu_KeyDown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
