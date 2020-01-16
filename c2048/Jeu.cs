@@ -13,6 +13,7 @@ namespace c2048
     public partial class Jeu : Form
     {
         private int _mouvements = 0;
+        private int[,] _case = new int[4,4];
 
         public enum Sens
         {
@@ -31,6 +32,8 @@ namespace c2048
         private void NouveauJeu_Click(object sender, EventArgs e)
         {
             MessageEtat("Nouvelle partie");
+            _case[2, 0] = 4;
+            Affiche(2, 0);
         }
 
         private void LabelEtat_Click(object sender, EventArgs e)
@@ -45,8 +48,8 @@ namespace c2048
             if (touche != Sens.Autre)
             {
                 _mouvements += 1;
-                LabelMouvement.Text = _mouvements.ToString();
             }
+            Affiche();
         }
 
         private void MessageEtat(string message)
@@ -73,8 +76,28 @@ namespace c2048
             
         private void Jeu_Load(object sender, EventArgs e)
         {
-            Case20.Text = "4";
-            Case20.BackColor = Color.LightGray;
+
+        }
+
+        private void Affiche(int x, int y)
+        {
+            var ctrl = Grille.Controls.Find($"Case{x}{y}", true)[0];
+            ctrl.Text = (_case[x, y] == 0) ? "" : _case[x, y].ToString();
+            var couleur = Outils.Couleurs(_case[x, y]);
+            ctrl.BackColor = couleur["fond"];
+            ctrl.ForeColor = couleur["fonte"];
+        }
+
+        private void Affiche()
+        {
+            for (int i = 0; i <= 3; i +=1)
+            {
+                for (int j = 0; j <= 3; j += 1)
+                {
+                    Affiche(i, j);
+                }
+            }
+            LabelMouvement.Text = _mouvements.ToString();
         }
     }
 }
