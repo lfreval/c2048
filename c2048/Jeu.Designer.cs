@@ -60,35 +60,39 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LabelEtat});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 369);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 710);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(334, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 28, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(668, 42);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // LabelEtat
             // 
             this.LabelEtat.Name = "LabelEtat";
-            this.LabelEtat.Size = new System.Drawing.Size(27, 17);
+            this.LabelEtat.Size = new System.Drawing.Size(55, 32);
             this.LabelEtat.Text = "Etat";
             this.LabelEtat.Click += new System.EventHandler(this.LabelEtat_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NouveauJeu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(334, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(668, 44);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // NouveauJeu
             // 
             this.NouveauJeu.Name = "NouveauJeu";
-            this.NouveauJeu.Size = new System.Drawing.Size(67, 20);
+            this.NouveauJeu.Size = new System.Drawing.Size(132, 36);
             this.NouveauJeu.Text = "&Nouveau";
             this.NouveauJeu.Click += new System.EventHandler(this.NouveauJeu_Click);
             // 
@@ -116,14 +120,15 @@
             this.Grille.Controls.Add(this.Case20, 2, 0);
             this.Grille.Controls.Add(this.Case10, 1, 0);
             this.Grille.Controls.Add(this.Case00, 0, 0);
-            this.Grille.Location = new System.Drawing.Point(20, 54);
+            this.Grille.Location = new System.Drawing.Point(40, 104);
+            this.Grille.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Grille.Name = "Grille";
             this.Grille.RowCount = 4;
             this.Grille.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Grille.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Grille.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Grille.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.Grille.Size = new System.Drawing.Size(300, 300);
+            this.Grille.Size = new System.Drawing.Size(600, 577);
             this.Grille.TabIndex = 2;
             // 
             // Case33
@@ -131,10 +136,10 @@
             this.Case33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case33.BackColor = System.Drawing.SystemColors.Info;
             this.Case33.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case33.Location = new System.Drawing.Point(227, 227);
-            this.Case33.Margin = new System.Windows.Forms.Padding(2);
+            this.Case33.Location = new System.Drawing.Point(454, 436);
+            this.Case33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case33.Name = "Case33";
-            this.Case33.Size = new System.Drawing.Size(71, 71);
+            this.Case33.Size = new System.Drawing.Size(142, 137);
             this.Case33.TabIndex = 15;
             this.Case33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -143,10 +148,10 @@
             this.Case23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case23.BackColor = System.Drawing.SystemColors.Info;
             this.Case23.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case23.Location = new System.Drawing.Point(152, 227);
-            this.Case23.Margin = new System.Windows.Forms.Padding(2);
+            this.Case23.Location = new System.Drawing.Point(304, 436);
+            this.Case23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case23.Name = "Case23";
-            this.Case23.Size = new System.Drawing.Size(71, 71);
+            this.Case23.Size = new System.Drawing.Size(142, 137);
             this.Case23.TabIndex = 14;
             this.Case23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -155,10 +160,10 @@
             this.Case13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case13.BackColor = System.Drawing.SystemColors.Info;
             this.Case13.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case13.Location = new System.Drawing.Point(77, 227);
-            this.Case13.Margin = new System.Windows.Forms.Padding(2);
+            this.Case13.Location = new System.Drawing.Point(154, 436);
+            this.Case13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case13.Name = "Case13";
-            this.Case13.Size = new System.Drawing.Size(71, 71);
+            this.Case13.Size = new System.Drawing.Size(142, 137);
             this.Case13.TabIndex = 13;
             this.Case13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -167,10 +172,10 @@
             this.Case03.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case03.BackColor = System.Drawing.SystemColors.Info;
             this.Case03.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case03.Location = new System.Drawing.Point(2, 227);
-            this.Case03.Margin = new System.Windows.Forms.Padding(2);
+            this.Case03.Location = new System.Drawing.Point(4, 436);
+            this.Case03.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case03.Name = "Case03";
-            this.Case03.Size = new System.Drawing.Size(71, 71);
+            this.Case03.Size = new System.Drawing.Size(142, 137);
             this.Case03.TabIndex = 12;
             this.Case03.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -179,10 +184,10 @@
             this.Case32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case32.BackColor = System.Drawing.SystemColors.Info;
             this.Case32.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case32.Location = new System.Drawing.Point(227, 152);
-            this.Case32.Margin = new System.Windows.Forms.Padding(2);
+            this.Case32.Location = new System.Drawing.Point(454, 292);
+            this.Case32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case32.Name = "Case32";
-            this.Case32.Size = new System.Drawing.Size(71, 71);
+            this.Case32.Size = new System.Drawing.Size(142, 136);
             this.Case32.TabIndex = 11;
             this.Case32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -191,10 +196,10 @@
             this.Case22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case22.BackColor = System.Drawing.SystemColors.Info;
             this.Case22.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case22.Location = new System.Drawing.Point(152, 152);
-            this.Case22.Margin = new System.Windows.Forms.Padding(2);
+            this.Case22.Location = new System.Drawing.Point(304, 292);
+            this.Case22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case22.Name = "Case22";
-            this.Case22.Size = new System.Drawing.Size(71, 71);
+            this.Case22.Size = new System.Drawing.Size(142, 136);
             this.Case22.TabIndex = 10;
             this.Case22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -203,10 +208,10 @@
             this.Case12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case12.BackColor = System.Drawing.SystemColors.Info;
             this.Case12.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case12.Location = new System.Drawing.Point(77, 152);
-            this.Case12.Margin = new System.Windows.Forms.Padding(2);
+            this.Case12.Location = new System.Drawing.Point(154, 292);
+            this.Case12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case12.Name = "Case12";
-            this.Case12.Size = new System.Drawing.Size(71, 71);
+            this.Case12.Size = new System.Drawing.Size(142, 136);
             this.Case12.TabIndex = 9;
             this.Case12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -215,10 +220,10 @@
             this.Case02.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case02.BackColor = System.Drawing.SystemColors.Info;
             this.Case02.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case02.Location = new System.Drawing.Point(2, 152);
-            this.Case02.Margin = new System.Windows.Forms.Padding(2);
+            this.Case02.Location = new System.Drawing.Point(4, 292);
+            this.Case02.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case02.Name = "Case02";
-            this.Case02.Size = new System.Drawing.Size(71, 71);
+            this.Case02.Size = new System.Drawing.Size(142, 136);
             this.Case02.TabIndex = 8;
             this.Case02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -227,10 +232,10 @@
             this.Case31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case31.BackColor = System.Drawing.SystemColors.Info;
             this.Case31.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case31.Location = new System.Drawing.Point(227, 77);
-            this.Case31.Margin = new System.Windows.Forms.Padding(2);
+            this.Case31.Location = new System.Drawing.Point(454, 148);
+            this.Case31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case31.Name = "Case31";
-            this.Case31.Size = new System.Drawing.Size(71, 71);
+            this.Case31.Size = new System.Drawing.Size(142, 136);
             this.Case31.TabIndex = 7;
             this.Case31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -239,10 +244,10 @@
             this.Case21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case21.BackColor = System.Drawing.SystemColors.Info;
             this.Case21.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case21.Location = new System.Drawing.Point(152, 77);
-            this.Case21.Margin = new System.Windows.Forms.Padding(2);
+            this.Case21.Location = new System.Drawing.Point(304, 148);
+            this.Case21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case21.Name = "Case21";
-            this.Case21.Size = new System.Drawing.Size(71, 71);
+            this.Case21.Size = new System.Drawing.Size(142, 136);
             this.Case21.TabIndex = 6;
             this.Case21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -251,10 +256,10 @@
             this.Case11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case11.BackColor = System.Drawing.SystemColors.Info;
             this.Case11.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case11.Location = new System.Drawing.Point(77, 77);
-            this.Case11.Margin = new System.Windows.Forms.Padding(2);
+            this.Case11.Location = new System.Drawing.Point(154, 148);
+            this.Case11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case11.Name = "Case11";
-            this.Case11.Size = new System.Drawing.Size(71, 71);
+            this.Case11.Size = new System.Drawing.Size(142, 136);
             this.Case11.TabIndex = 5;
             this.Case11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -263,10 +268,10 @@
             this.Case01.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case01.BackColor = System.Drawing.SystemColors.Info;
             this.Case01.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case01.Location = new System.Drawing.Point(2, 77);
-            this.Case01.Margin = new System.Windows.Forms.Padding(2);
+            this.Case01.Location = new System.Drawing.Point(4, 148);
+            this.Case01.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case01.Name = "Case01";
-            this.Case01.Size = new System.Drawing.Size(71, 71);
+            this.Case01.Size = new System.Drawing.Size(142, 136);
             this.Case01.TabIndex = 4;
             this.Case01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -275,10 +280,10 @@
             this.Case30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case30.BackColor = System.Drawing.SystemColors.Info;
             this.Case30.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case30.Location = new System.Drawing.Point(227, 2);
-            this.Case30.Margin = new System.Windows.Forms.Padding(2);
+            this.Case30.Location = new System.Drawing.Point(454, 4);
+            this.Case30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case30.Name = "Case30";
-            this.Case30.Size = new System.Drawing.Size(71, 71);
+            this.Case30.Size = new System.Drawing.Size(142, 136);
             this.Case30.TabIndex = 3;
             this.Case30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -287,10 +292,10 @@
             this.Case20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case20.BackColor = System.Drawing.SystemColors.Info;
             this.Case20.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case20.Location = new System.Drawing.Point(152, 2);
-            this.Case20.Margin = new System.Windows.Forms.Padding(2);
+            this.Case20.Location = new System.Drawing.Point(304, 4);
+            this.Case20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case20.Name = "Case20";
-            this.Case20.Size = new System.Drawing.Size(71, 71);
+            this.Case20.Size = new System.Drawing.Size(142, 136);
             this.Case20.TabIndex = 2;
             this.Case20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -299,10 +304,10 @@
             this.Case10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case10.BackColor = System.Drawing.SystemColors.Info;
             this.Case10.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case10.Location = new System.Drawing.Point(77, 2);
-            this.Case10.Margin = new System.Windows.Forms.Padding(2);
+            this.Case10.Location = new System.Drawing.Point(154, 4);
+            this.Case10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case10.Name = "Case10";
-            this.Case10.Size = new System.Drawing.Size(71, 71);
+            this.Case10.Size = new System.Drawing.Size(142, 136);
             this.Case10.TabIndex = 1;
             this.Case10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -311,10 +316,10 @@
             this.Case00.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Case00.BackColor = System.Drawing.SystemColors.Info;
             this.Case00.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Case00.Location = new System.Drawing.Point(2, 2);
-            this.Case00.Margin = new System.Windows.Forms.Padding(2);
+            this.Case00.Location = new System.Drawing.Point(4, 4);
+            this.Case00.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Case00.Name = "Case00";
-            this.Case00.Size = new System.Drawing.Size(71, 71);
+            this.Case00.Size = new System.Drawing.Size(142, 136);
             this.Case00.TabIndex = 0;
             this.Case00.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -322,9 +327,10 @@
             // 
             this.TexteScore.AutoSize = true;
             this.TexteScore.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TexteScore.Location = new System.Drawing.Point(23, 31);
+            this.TexteScore.Location = new System.Drawing.Point(46, 60);
+            this.TexteScore.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.TexteScore.Name = "TexteScore";
-            this.TexteScore.Size = new System.Drawing.Size(48, 20);
+            this.TexteScore.Size = new System.Drawing.Size(93, 35);
             this.TexteScore.TabIndex = 3;
             this.TexteScore.Text = "Score :";
             // 
@@ -332,35 +338,38 @@
             // 
             this.LabelScore.AutoSize = true;
             this.LabelScore.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelScore.Location = new System.Drawing.Point(71, 31);
+            this.LabelScore.Location = new System.Drawing.Point(142, 60);
+            this.LabelScore.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelScore.Name = "LabelScore";
-            this.LabelScore.Size = new System.Drawing.Size(0, 20);
+            this.LabelScore.Size = new System.Drawing.Size(0, 35);
             this.LabelScore.TabIndex = 4;
             // 
             // LabelMouvement
             // 
             this.LabelMouvement.AutoSize = true;
             this.LabelMouvement.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMouvement.Location = new System.Drawing.Point(259, 31);
+            this.LabelMouvement.Location = new System.Drawing.Point(518, 60);
+            this.LabelMouvement.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelMouvement.Name = "LabelMouvement";
-            this.LabelMouvement.Size = new System.Drawing.Size(0, 20);
+            this.LabelMouvement.Size = new System.Drawing.Size(0, 35);
             this.LabelMouvement.TabIndex = 6;
             // 
             // TexteMouvement
             // 
             this.TexteMouvement.AutoSize = true;
             this.TexteMouvement.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TexteMouvement.Location = new System.Drawing.Point(173, 31);
+            this.TexteMouvement.Location = new System.Drawing.Point(346, 60);
+            this.TexteMouvement.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.TexteMouvement.Name = "TexteMouvement";
-            this.TexteMouvement.Size = new System.Drawing.Size(86, 20);
+            this.TexteMouvement.Size = new System.Drawing.Size(170, 35);
             this.TexteMouvement.TabIndex = 5;
             this.TexteMouvement.Text = "Mouvements :";
             // 
             // Jeu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 391);
+            this.ClientSize = new System.Drawing.Size(668, 752);
             this.Controls.Add(this.LabelMouvement);
             this.Controls.Add(this.TexteMouvement);
             this.Controls.Add(this.LabelScore);
@@ -369,11 +378,13 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(350, 430);
+            this.MinimumSize = new System.Drawing.Size(674, 761);
             this.Name = "Jeu";
             this.Text = "2048";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jeu_FormClosing);
+            this.Load += new System.EventHandler(this.Jeu_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Jeu_KeyDown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

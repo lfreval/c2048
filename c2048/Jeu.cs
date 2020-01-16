@@ -70,5 +70,11 @@ namespace c2048
         {
             e.Cancel = MessageBox.Show(String.Format("Fermeture de l'application demandée pour {0}. Voulez-vous quitter ?", e.CloseReason), "Fermeture...", MessageBoxButtons.YesNo) == DialogResult.No;
         }
+            
+        private void Jeu_Load(object sender, EventArgs e)
+        {
+            Case20.Text = "4";
+            Case20.BackColor = Color.LightGray;
+        }
     }
 }
