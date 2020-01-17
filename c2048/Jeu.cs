@@ -33,7 +33,9 @@ namespace c2048
         {
             MessageEtat("Nouvelle partie");
             _case[2, 0] = 4;
-            Affiche(2, 0);
+            _case[1, 1] = 2;
+            _case[3, 3] = 2;            
+            Affiche();
         }
 
         private void LabelEtat_Click(object sender, EventArgs e)
