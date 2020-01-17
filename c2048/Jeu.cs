@@ -45,11 +45,11 @@ namespace c2048
         {
             Sens touche = Direction(e);
             MessageEtat($"Touche {touche}");
-            if (touche != Sens.Autre)
+            if (touche != Sens.Autre && Bouge(touche))
             {
                 _mouvements += 1;
+                Affiche();
             }
-            Affiche();
         }
 
         private void MessageEtat(string message)
@@ -98,6 +98,80 @@ namespace c2048
                 }
             }
             LabelMouvement.Text = _mouvements.ToString();
+        }
+
+        private bool Bouge(Sens s)
+        {
+            bool caseDeplacee = false;
+
+            switch (s)
+            {
+                case Sens.Droite:
+                    // pour chaque ligne
+                    for (int j = 0; j <= 3; j += 1)
+                    {
+                        // pour chaque colonne
+                        for (int i = 2; i >= 0; i -= 1)
+                        {
+                            if ((_case[i + 1, j] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i + 1, j] = _case[i, j];
+                                _case[i, j] = 0;
+                                caseDeplacee = true;
+                            }
+                        }
+                    }
+                    break;
+                case Sens.Gauche:
+                    // pour chaque ligne
+                    for (int j = 0; j <= 3; j += 1)
+                    {
+                        // pour chaque colonne
+                        for (int i = 1; i <= 3; i += 1)
+                        {
+                            if ((_case[i - 1, j] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i - 1, j] = _case[i, j];
+                                _case[i, j] = 0;
+                                caseDeplacee = true;
+                            }
+                        }
+                    }
+                    break;
+                case Sens.Bas:
+                    // pour chaque ligne
+                    for (int j = 2; j >= 0; j -= 1)
+                    {
+                        // pour chaque colonne
+                        for (int i = 0; i <= 3; i += 1)
+                        {
+                            if ((_case[i, j+1] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i, j+1] = _case[i, j];
+                                _case[i, j] = 0;
+                                caseDeplacee = true;
+                            }
+                        }
+                    }
+                    break;
+                case Sens.Haut:
+                    // pour chaque ligne
+                    for (int j = 1; j <= 3; j += 1)
+                    {
+                        // pour chaque colonne
+                        for (int i = 0; i <= 3; i += 1)
+                        {
+                            if ((_case[i, j-1] == 0) && (_case[i, j] != 0))
+                            {
+                                _case[i, j-1] = _case[i, j];
+                                _case[i, j] = 0;
+                                caseDeplacee = true;
+                            }
+                        }
+                    }
+                    break;
+            }
+            return caseDeplacee;
         }
     }
 }
