@@ -31,6 +31,7 @@ namespace c2048
 
         private void NouveauJeu_Click(object sender, EventArgs e)
         {
+            Logs.Warn("Nouvelle partie");
             MessageEtat("Nouvelle partie");
             _case[2, 0] = 4;
             _case[1, 1] = 2;
@@ -74,11 +75,15 @@ namespace c2048
         private void Jeu_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = MessageBox.Show(String.Format("Fermeture de l'application demandée pour {0}. Voulez-vous quitter ?", e.CloseReason), "Fermeture...", MessageBoxButtons.YesNo) == DialogResult.No;
+            Logs.Debug("Fin du programme");
         }
             
         private void Jeu_Load(object sender, EventArgs e)
         {
-
+            log4net.GlobalContext.Properties["fichierLog"] = $"C:\\Users\\{Environment.UserName}\\AppData\\LocalLow\\Temp\\2048.log";
+            log4net.Config.XmlConfigurator.Configure();
+            //log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo($"C:\\Users\\{Environment.UserName}\\AppData\\LocalLow\\Temp\\2048.log"));
+            Logs.Debug("Début du programme");
         }
 
         private void Affiche(int x, int y)
@@ -120,6 +125,7 @@ namespace c2048
                                 _case[i + 1, j] = _case[i, j];
                                 _case[i, j] = 0;
                                 caseDeplacee = true;
+                                Logs.Info($"déplacement à {s} : {_case[i, j]} de {i},{j}");
                             }
                         }
                     }
@@ -136,6 +142,7 @@ namespace c2048
                                 _case[i - 1, j] = _case[i, j];
                                 _case[i, j] = 0;
                                 caseDeplacee = true;
+                                Logs.Info($"déplacement à {s} : {_case[i, j]} de {i},{j}");
                             }
                         }
                     }
@@ -152,6 +159,7 @@ namespace c2048
                                 _case[i, j+1] = _case[i, j];
                                 _case[i, j] = 0;
                                 caseDeplacee = true;
+                                Logs.Info($"déplacement à {s} : {_case[i, j]} de {i},{j}");
                             }
                         }
                     }
@@ -168,6 +176,7 @@ namespace c2048
                                 _case[i, j-1] = _case[i, j];
                                 _case[i, j] = 0;
                                 caseDeplacee = true;
+                                Logs.Info($"déplacement à {s} : {_case[i, j]} de {i},{j}");
                             }
                         }
                     }
